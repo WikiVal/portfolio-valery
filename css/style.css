@@ -1,0 +1,49 @@
+
+/* Basic responsive styling */
+:root{
+  --bg:#f5f7fb; --card:#fff; --accent:#2c3e50; --muted:#6b7280;
+  --accent-2:#3498db;
+  --maxw:1000px;
+  --radius:10px;
+  --gap:18px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0; background:var(--bg); color:#111; line-height:1.45;}
+.container{max-width:var(--maxw); margin:28px auto; padding:24px;}
+.header{
+  background:linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:white; padding:40px 24px; border-radius:var(--radius);
+  display:flex; gap:20px; align-items:center;
+}
+.avatar{
+  width:120px; height:120px; border-radius:12px; background:rgba(255,255,255,0.08);
+  display:flex; align-items:center; justify-content:center; font-size:28px;
+}
+.header h1{margin:0 0 6px 0; font-size:28px}
+.header p{margin:0; opacity:0.95}
+.card{background:var(--card); padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(10,10,10,0.06); margin-bottom:var(--gap);}
+.section-title{font-size:18px; margin-bottom:12px; color:var(--accent)}
+.meta{display:flex; flex-wrap:wrap; gap:12px; color:var(--muted); font-size:14px}
+
+.nav{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:16px;}
+.nav a{color:var(--accent); text-decoration:none; margin-right:10px; font-weight:600}
+.nav a:hover{text-decoration:underline}
+.nav-brand{font-weight:800; font-size:18px}
+
+/* skills */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#eef6ff;padding:8px 10px;border-radius:8px;font-weight:600;color:var(--accent-2)}
+
+/* experience list */
+.job{margin-bottom:14px}
+.job h3{margin:0;font-size:16px}
+.job .period{color:var(--muted); font-size:13px}
+.job ul{margin:8px 0 0 18px}
+
+/* responsive */
+@media (min-width:880px){
+  .header{padding:40px; align-items:center}
+  .header-left{flex:1}
+  .header-right{min-width:320px}
+}
